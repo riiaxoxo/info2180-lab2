@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    color: #2D3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #3C8527;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 35px;
+}
+
+.header-text {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 39px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+header p {
+    margin: 0;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+main {
+    grid-area: main;
+    padding: 35px 45px;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+article h2 {
+    font-size: 34px;
+    color: #28651C;
+    margin-bottom: 5px;
+}
+
+.post-info {
+    color: #667267;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.post-image {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px 20px 10px 0;
+}
+
+.post-image.left {
+    float: left;
+}
+
+.post-image.right {
+    float: right;
+    margin: 10px 0 10px 20px;
+}
+
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+aside {
+    grid-area: aside;
+    padding: 35px 25px;
+}
+
+aside section {
+    margin-bottom: 30px;
+}
+
+aside h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-top: 0;
+}
+
+.about {
+    background-color: #E2E8F0;
+    padding: 20px;
+}
+
+.about h3 {
+    color: #333322;
+}
+
+aside section:not(.about) h3 {
+    color: #28651C;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside a {
+    color: #2879B8;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #28651C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
